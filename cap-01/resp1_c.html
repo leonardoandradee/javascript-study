@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resposta - Exercício 01 - C</title>
+  </head>
+  <body>
+    <script>
+      const preco = Number(prompt("Informe o preço do produto: R$"));
+      const parcela = Number(prompt("Informe a quantidade de parcelas: "));
+      const vista = preco - preco * 0.1;
+      const parcelado = preco / parcela;
+
+      alert(
+        `À Vista: R$ ${vista.toFixed(
+          2
+        )}\nOu ${parcela}x de: R$ ${parcelado.toFixed(2)}`
+      );
+    </script>
+  </body>
+</html>
