@@ -9,12 +9,12 @@ frm.addEventListener("submit", (e) => {
   const veiculo = frm.inVeiculo.value           // obtém conteúdo dos campos
   const preco = Number(frm.inPreco.value)
 
-  const entrada = preco * 0.50                  // Aredonda para baixo resultado
-  const parcela = (preco * 0.50) / 12           // obtém o resto da divisão
+  const entrada = preco * 0.50                  // calcula valor da entrada
+  const parcela = (preco * 0.50) / 12           // ... e das parcelas
 
-  resp1.innerText = `Promoção: ${veiculo}`      // Exibe as respostas
+  resp1.innerText = `Promoção: ${veiculo}`      // exibe as respostas
   resp2.innerText = `Entrada de R$: ${entrada.toFixed(2)}`
   resp3.innerText = `+12x de R$ ${parcela.toFixed(2)}`
 
-  e.preventDefault()                             // Evita envio do form
+  e.preventDefault()                             // evita envio do form
 })

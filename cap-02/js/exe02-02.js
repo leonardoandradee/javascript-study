@@ -8,11 +8,11 @@ frm.addEventListener("submit", (e) => {
   const titulo = frm.inTitulo.value             // obtém conteúdo dos campos
   const duracao = Number(frm.inDuracao.value)
 
-  const horas = Math.floor(duracao / 60)        // Aredonda para baixo resultado
+  const horas = Math.floor(duracao / 60)        // arredonda para baixo resultado
   const minutos = duracao % 60                  // obtém o resto da divisão
 
-  resp1.innerText = titulo                      // Exibe as respostas
+  resp1.innerText = titulo                      // exibe as respostas
   resp2.innerText = `${horas} hora(s) e ${minutos} minuto(s)`
 
-  e.preventDefault()                             // Evita envio do form
+  e.preventDefault()                             // evita envio do form
 })
