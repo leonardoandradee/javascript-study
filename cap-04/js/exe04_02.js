@@ -17,7 +17,7 @@ frm.addEventListener("submit", (e) => {
   } else {
     peso = 21 * Math.pow(altura, 2);
   } */
-    
+
   // Aplicando operador ternário para minificar o JS do if e else
   const peso = masculino ? 22 * Math.pow(altura, 2) : 21 * Math.pow(altura, 2);
 

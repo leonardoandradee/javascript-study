@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exemplo 04 - 03</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        const bairro = prompt("Bairro de Entrega: ")
-        let taxaEntrega 
-        switch (bairro) {
-            case "Centro":
-                taxaEntrega = 5.00
-                break
-            case "Fragata":
-            case "Três Vendas":
-                taxaEntrega = 7.00
-                break
-            case "Laranjal":
-                taxaEntrega = 10.00
-                break
-            default:
-                taxaEntrega = 8.00    
-        }
-        alert(`Taxa R$: ${taxaEntrega.toFixed(2)}`)
+      const bairro = prompt("Bairro de Entrega: ");
+      let taxaEntrega;
+      switch (bairro) {
+        case "Centro":
+          taxaEntrega = 5.0;
+          break;
+        case "Fragata":
+        case "Três Vendas":
+          taxaEntrega = 7.0;
+          break;
+        case "Laranjal":
+          taxaEntrega = 10.0;
+          break;
+        default:
+          taxaEntrega = 8.0;
+      }
+      alert(`Taxa R$: ${taxaEntrega.toFixed(2)}`);
     </script>
-</body>
+  </body>
 </html>
