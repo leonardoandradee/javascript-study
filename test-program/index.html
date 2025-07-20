@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/plugins.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Programa - Boletim Escolar</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="app">
+      <div class="container">
+        <h1>Cadastro de Aluno</h1>
+
+        <form id="formAluno">
+          <label for="nome">Nome do Aluno:</label>
+          <input type="text" name="nome" id="nome" required />
+
+          <label for="quantidade">Quantidade de Bimestres:</label>
+          <input
+            type="number"
+            id="quantidade"
+            name="quantidade"
+            required
+            min="1"
+            max="10"
+          />
+          <button type="button" id="gerarNotas">Gerar campos de nota</button>
+
+          <div id="notasContainer"></div>
+
+          <button type="submit" id="btnCadastrar" disabled>
+            Cadastrar aluno
+          </button>
+        </form>
+
+        <div id="filtros">
+          <div id="containerFiltroNome">
+            <input
+              type="text"
+              id="filtroNome"
+              placeholder="Buscar por nome do aluno..."
+              class="campo-busca"
+            />
+          </div>
+
+          <div id="containerFiltroStatus">
+            <label for="filtroStatus">Status:</label>
+            <select id="filtroStatus">
+              <option value="todos">Todos</option>
+              <option value="aprovado">Aprovado</option>
+              <option value="recuperacao">Recuperação</option>
+              <option value="reprovado">Reprovado</option>
+            </select>
+          </div>
+
+          <div id="containerOrdenarPor">
+            <label for="ordenarPor">Ordenar por:</label>
+            <select id="ordenarPor">
+              <option value="nome">Nome</option>
+              <option value="media">Média</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="resultado" id="resultado"></div>
+
+        <!-- Container para o gráfico -->
+        <div
+          id="graficoDesempenhoContainer"
+          style="max-width: 600px; margin: 2rem auto"
+        >
+          <canvas id="graficoDesempenho"></canvas>
+        </div>
+
+        <button id="btnLimparLista" class="btn-danger">
+          Limpar lista de alunos
+        </button>
+
+        <div class="btn-exportar">
+          <button id="btnExportarCSV" class="btn-exportar">Exportar CSV</button>
+          <button id="btnExportarJSON" class="btn-exportar">
+            Exportar JSON
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/plugins.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/all.js"></script>
+  </body>
+</html>

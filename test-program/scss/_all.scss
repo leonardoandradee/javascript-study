@@ -1,0 +1,217 @@
+.app {
+  padding: 12rem 0;
+  .container {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    h1 {
+      color: var(--blue-01);
+      text-align: center;
+      font-size: 2.4rem;
+      font-weight: 900;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 4rem;
+      label {
+        font-size: 1.6rem;
+        margin-top: 2.4rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+        color: var(--blue-01);
+      }
+      input {
+        padding: 0.8rem;
+        border: 0.1rem solid var(--blue-03);
+        border-radius: 0.4rem;
+        margin-top: 0.4rem;
+      }
+      button {
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-top: 2rem;
+        padding: 1rem;
+        background-color: var(--blue-01);
+        color: var(--white);
+        border-radius: 0.4rem;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          background-color: var(--blue-02);
+          color: var(--blue-03);
+        }
+      }
+      #notasContainer {
+        display: grid;
+        grid-template-columns: repeat(
+          auto-fit,
+          minmax(240px, 1fr)
+        ); // ou número fixo de colunas
+        gap: 1.6rem;
+      }
+      .nota-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.6rem;
+      }
+      #btnCadastrar {
+        display: none; // esconde o botão inicialmente
+        &.visivel {
+          display: inline-block; // mostra quando adiciona a classe
+        }
+        &:disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
+        }
+      }
+    }
+    #filtros {
+      margin-top: 2.4rem;
+      label {
+        font-size: 1.2rem;
+        margin-right: 0.8rem;
+        color: var(--blue-01);
+      }
+      select {
+        color: var(--blue-01);
+        &:not(:first-child) {
+          margin-right: 1.6rem;
+        }
+      }
+      #containerFiltroNome {
+        margin-right: 1.6rem;
+        #filtroNome {
+          font-family: "Inter", sans-serif;
+          background-color: var(--color-background);
+          color: var(--blue-02);
+          padding: 0.5rem 1rem;
+          border: 0.2rem solid var(--blue-03);
+          border-radius: 0.8rem;
+          font-size: 1.4rem;
+          width: 100%;
+          max-width: 30rem;
+          transition: border 0.2s ease;
+          &::placeholder {
+            color: var(--blue-01);
+          }
+          &:hover {
+            border-color: var(--blue-01);
+          }
+          &:focus {
+            outline: none;
+            border-color: var(--blue-02);
+          }
+        }
+      }
+    }
+    #resultado {
+      background-color: var(--blue-03);
+      padding: 4rem;
+      border-radius: 0.5rem;
+      margin-top: 4rem;
+      color: #333;
+      display: none; /* esconde por padrão */
+      h2 {
+        color: var(--blue-01);
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 900;
+        margin-bottom: 1.6rem;
+      }
+      .relatorio-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        .aluno-relatorio {
+          border: 1px solid var(--blue-01);
+          padding: 2.4rem;
+          margin-bottom: 1rem;
+          border-radius: 0.4rem;
+          background-color: #fff;
+          p {
+            font-size: 1.4rem;
+            font-weight: 400;
+            &:not(:first-child) {
+              margin-top: 0.8rem;
+            }
+            strong {
+              font-size: 1.6rem;
+              color: var(--blue-01);
+            }
+          }
+          .status-aprovado {
+            color: green;
+          }
+          .status-reprovado {
+            color: red;
+          }
+          .status-recuperacao {
+            color: #f1ca12;
+          }
+        }
+        .botoes-acao {
+          button {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background-color: var(--blue-01);
+            color: var(--white);
+            border-radius: 0.4rem;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+              background-color: var(--blue-02);
+              color: var(--blue-03);
+            }
+            &:not(:last-child) {
+              margin-right: 0.8rem;
+            }
+          }
+        }
+        .aluno-destaque {
+          padding: 2.4rem;
+          margin-bottom: 1rem;
+          border-radius: 0.4rem;
+          background-color: #fff9c4; /* amarelo claro */
+          border: 2px solid #fbc02d; /* amarelo mais forte */
+        }
+      }
+    }
+    .btn-danger {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: var(--blue-01);
+      color: var(--white);
+      border-radius: 0.4rem;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background-color: var(--blue-02);
+        color: var(--blue-03);
+      }
+    }
+    #graficoDesempenhoContainer {
+      font-family: "Inter", sans-serif;
+      max-width: 100%;
+      margin: 2rem auto;
+      background-color: var(--color-background);
+      border-radius: 0.8rem;
+      padding: 1rem;
+    }
+    canvas#graficoDesempenho {
+      font-family: "Inter", sans-serif;
+      display: block;
+      width: 100% !important;
+      height: 320px !important;
+    }
+    .btn-exportar {
+      margin: 1.6rem auto;
+      button {
+        &:not(:first-child) {
+          margin-left: 1.6rem;
+        }
+      }
+    }
+  }
+}

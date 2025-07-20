@@ -1,0 +1,33 @@
+--- RELATÓRIO FINAL ---
+
+Aluno: Leonardo Andrade
+1º Bimestre: 7
+2º Bimestre: 5
+3º Bimestre: 8
+4º Bimestre: 1
+Média final: 5.25
+Situação: Reprovado
+
+Aluno: Vitória Santos
+1º Bimestre: 9
+2º Bimestre: 7
+3º Bimestre: 4
+4º Bimestre: 10
+Média final: 7.50
+Situação: Aprovado
+
+Aluno: Leonardo Santos
+1º Bimestre: 10
+2º Bimestre: 8
+3º Bimestre: 7
+4º Bimestre: 9
+Média final: 8.50
+Situação: Aprovado
+
+--- RESUMO ---
+Total de alunos: 3
+Aprovados com mérito: 0
+Aprovados: 2
+Reprovados: 1
+
+Aluno com a maior média: Leonardo Santos (8.50)
